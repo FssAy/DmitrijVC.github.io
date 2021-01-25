@@ -13,7 +13,7 @@ Bellow you can find info about how to create an unofficial client.
 
 ## _WebSocket_
 To upload an image, you have to connect to the Ultra web socket first. <br>
-**ws port:** `3001`
+**ws port:** `3000`
 
 Then read the whole file into bytes, and encode it to base64. Example:
 ```rust
@@ -30,7 +30,7 @@ fn read() -> String {
 
 ## _Responses_
 
-If everything went correctly and your data was sent, you should receive the response.
+If everything went correctly and your data was sent, you should receive the response. <br>
 `<status>:<message>`
 
 Here is the list of all available responses:
@@ -44,8 +44,8 @@ Here is the list of all available responses:
 # Getting Images
 > To access a certain image you have to have its ID. <br>
 > It's possible to get the image:
-> -  directly
-> -  as a json response
+> -  ~~directly~~
+> -  ~~as a json response~~
 > -  and load it on the page
 
 ## _Endpoint_
