@@ -64,7 +64,7 @@ Here is the list of all available responses:
 # Getting Images
 > To access a certain image you have to have its ID. <br>
 > It's possible to get the image:
-> -  ~~directly~~
+> -  directly
 > -  ~~as a json response~~
 > -  and load it on the page
 
@@ -72,7 +72,9 @@ Here is the list of all available responses:
 The endpoint for accessing an image is: `/img?id=<ID>` <br>
 If the image with a certain ID doesn't exist, you will be welcomed with a 404 page and "NOT_FOUND" status code. <br>
 Otherwise, it will load a page with this image. <br>
-If you add `&api=1` you will get a json response.
+If you add `&api=1` you will get a raw image. <br>
+
+Additionaly you can access static images like `/images/<ID>.png` <br>
 
 
 # Disclaimer
