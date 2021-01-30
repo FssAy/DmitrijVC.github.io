@@ -11,7 +11,7 @@ Bellow you can find info about how to create an unofficial client.
 > However, you can only upload images that are bellow 10 MB. <br>
 > Also every file is saved as a PNG for now.
 
-## _WebSocket_
+_<h3>WebSocket</h3>_
 To upload an image, you have to connect to the Ultra web socket first. <br>
 **ws port:** `3000`
 
@@ -48,8 +48,7 @@ asyncio.get_event_loop().run_until_complete(
 )
 ```
 
-## _Responses_
-
+_<h3>Responses</h3>_
 If everything went correctly and your data was sent, you should receive the response. <br>
 `<status>:<message>`
 
@@ -68,7 +67,7 @@ Here is the list of all available responses:
 > -  ~~as a json response~~
 > -  and load it on the page
 
-## _Endpoint_
+_<h3>Endpoint</h3>_
 The endpoint for accessing an image is: `/img?id=<ID>` <br>
 If the image with a certain ID doesn't exist, you will be welcomed with a 404 page and "NOT_FOUND" status code. <br>
 Otherwise, it will load a page with this image. <br>
