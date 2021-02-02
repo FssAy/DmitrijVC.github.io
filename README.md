@@ -13,7 +13,8 @@ Bellow you can find info about how to create an unofficial client.
 
 _<h3>WebSocket</h3>_
 To upload an image, you have to connect to the Ultra web socket first. <br>
-**ws host:** `135.125.132.235:3000`
+**ws host:** `135.125.132.235:3000` <br> 
+**req from:** `https://pastebin.com/raw/8S11wyQQ` 
 
 Message should contain the title, description and the whole image encoded in base64, all separated by the null terminator. <br>
 **example message**: `<title>\0<description>\0<imgInBase64>`
