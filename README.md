@@ -5,11 +5,16 @@ Uploading an image is 100% anonymous, without logging any data about the user. <
 For now the official client is not yet available. <br>
 Bellow you can find info about how to create an unofficial client.
 
+# Supported formats
+- PNG
+- JPEG
+- BMP
+- ICO
+- GIF
 
 # Uploading images
 > Currently, there is no rate limit implemented, but I am working on it. <br>
 > However, you can only upload images that are bellow 10 MB. <br>
-> Also every file is saved as a PNG for now. <br>
 
 _<h3>WebSocket</h3>_
 To upload an image, you have to connect to the Ultra web socket first. <br>
@@ -57,8 +62,9 @@ Here is the list of all available responses:
 - error:invalid data        - *The received data could not be decoded*
 - error:not an image        - *The received data is not an image*
 - error:image is too big    - *Image is bigger than 10 MB*
-- error:can not save        - *Image could not been saved to the database*
+- error:cannot save         - *Image could not been saved to the database*
 - error:above the limits    - *Title or description length is above the limit*
+- error:unsupported format  - *The file format isn't supported*
 - ok:&lt;id&gt;             - *Success, where &lt;id&gt; is your image ID*
 
 
@@ -75,7 +81,7 @@ If the image with a certain ID doesn't exist, you will be welcomed with a "404 n
 Otherwise, it will load a page with desired image. <br>
 If you add `&api=1` you will get a raw image. <br>
 
-Additionally, you can access static images like `/images/<ID>.png` <br>
+Additionally, you can access static images like `/images/<ID>.<Extention>` <br>
 
 # Removing Images
 > Ultra database will be wiped every month
