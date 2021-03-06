@@ -7,6 +7,86 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    .sidebar, .sidebar-toggle {
+      background-color:#222224;
+    }
+
+    body {
+      background-color:#29292b;
+      color: #a8a8a8;
+    }
+
+    .markdown-section td, .markdown-section th {
+      border: 1px solid #6b6b6b;
+    }
+
+    .markdown-section th {
+      background-color: rgb(35, 37, 38);
+    }
+
+    .markdown-section td {
+      background-color: rgb(28, 30, 31);
+    }
+
+    .markdown-section span {
+      color: #bfbfbf;
+    }
+
+    .markdown-section strong {
+      color: #a8a8a8;
+    }
+
+    .markdown-section pre {
+      background-color: #1C1E1F;
+    }
+
+    .markdown-section blockquote {
+      border-left: 4px solid var(--theme-color,#b100f9)
+    }
+
+    .markdown-section a {
+      color: var(--theme-color,#b100f9);
+    }
+
+    .sidebar ul li.active>a {
+      color: var(--theme-color,#b100f9);
+    }
+
+    /* --- CODE --- */
+      .markdown-section pre > code, .token.builtin, .token.interpolation {
+        color: rgb(180, 174, 164);
+      }
+
+      .token.punctuation, .token.operator {
+        color: #7d776b;
+      }
+
+      .markdown-section code {
+        font-family: Consolas,"courier new";
+        background-color: rgb(28, 30, 31);
+        padding: 2px;
+        font-size: 105%;
+      }
+
+    /* --- SCROLL --- */
+      ::-webkit-scrollbar
+      {
+        background-color: #202324;
+        color: #aba499;
+      }
+
+      ::-webkit-scrollbar-corner
+      {
+        background-color: #181a1b;
+      }
+
+      ::-webkit-scrollbar-thumb
+      {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #454a4d;
+      }
+  </style>
 </head>
 <body>
   <div id="app"></div>
@@ -21,5 +101,6 @@
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//unpkg.com/prismjs@1.23.0/components/prism-python.min.js"></script>
 </body>
 </html>
