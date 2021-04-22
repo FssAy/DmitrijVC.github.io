@@ -76,7 +76,7 @@ Token consists of <ID>.<TimeStamp>.<Key>
 
 | Method          | Endpoint                          | Body               |
 | :-------------: | :-------------------------------: | :----------------: |
-| `GET`           | `/img/id=<ID>`                    |                    |
+| `GET`           | `/img?id=<ID>`                    |                    |
 | `GET`           | `/images/<ID>.<FileExtention>`    |                    |
 
 Request to /img will result in rendered page with image title, description, and preview, but
