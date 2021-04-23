@@ -11,7 +11,7 @@ Here you can find all information needed to develop a UltraSC unofficial client.
 
 _<h3>WebSocket</h3>_
 To upload an image, you have to connect to the Ultra web socket first. <br>
-**ws host:** `135.125.132.235:3000` <br> 
+**ws host:** `ultrasc.tk:2095` <br> 
 **req from:** `https://pastebin.com/raw/8S11wyQQ` 
 
 Message should contain the title, description and the whole image encoded in base64, all separated by the null terminator. <br>
@@ -43,7 +43,7 @@ img_data = b"Test Title\0Test Description that can be much longer\0" + base64.b6
 f.close()
 
 asyncio.get_event_loop().run_until_complete(
-    upload("ws://135.125.132.235:3000", img_data)
+    upload("ws://ultrasc.tk:2095", img_data)
 )
 ```
 
