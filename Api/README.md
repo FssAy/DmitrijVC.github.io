@@ -77,11 +77,14 @@ Token consists of <ID>.<TimeStamp>.<Key>
 | Method          | Endpoint                          | Body               |
 | :-------------: | :-------------------------------: | :----------------: |
 | `GET`           | `/img?id=<ID>`                    |                    |
-| `GET`           | `/images/<ID>.<FileExtention>`    |                    |
+| `GET`           | `/img/raw?id=<ID>`                |                    |
+| `GET`           | `/images/<ID>`                    |                    |
 
-Request to /img will result in rendered page with image title, description, and preview, but
-request to /images will result in a static file. <br>
-**(WIP)** If you want to get a raw file from /img, just add `&raw=1` to the uri. 
+
+Request to `/img` will result in rendered page with image title, description, and preview, but
+request to `/images` will result in a static file directly from the drive. <br>
+If you want to get a file with extention go to `/img/raw?id=<ID>` (WIP getting title and description). <br>
+To download an image it's better to use `/img/raw?id=<ID>`, but if you want to place it on some website, `/images/<ID>` will be faster and better solution.
 
 <br>
 <br>
