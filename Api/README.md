@@ -12,7 +12,7 @@ Here you can find all information needed to develop a UltraSC unofficial client.
 _<h3>WebSocket</h3>_
 To upload an image, you have to connect to the Ultra web socket first. <br>
 **ws host:** `ultrasc.tk:2095` <br> 
-**req from:** `https://pastebin.com/raw/8S11wyQQ` 
+**wss host:** `ultrasc.tk:2096` <br> 
 
 Message should contain the title, description and the whole image encoded in base64, all separated by the null terminator. <br>
 **example message**: `<title>\0<description>\0<imgInBase64>`
@@ -83,7 +83,7 @@ Token consists of <ID>.<TimeStamp>.<Key>
 
 Request to `/img` will result in rendered page with image title, description, and preview, but
 request to `/images` will result in a static file directly from the drive. <br>
-If you want to get a file with extention go to `/img/raw?id=<ID>` (WIP getting title and description). <br>
+If you want to get a file with extension go to `/img/raw?id=<ID>` (WIP getting title and description). <br>
 To download an image it's better to use `/img/raw?id=<ID>`, but if you want to place it on some website, `/images/<ID>` will be faster and better solution.
 
 <br>
@@ -95,6 +95,8 @@ To download an image it's better to use `/img/raw?id=<ID>`, but if you want to p
 | Method          | Endpoint           | Body               |
 | :-------------: | :----------------: | :----------------: |
 | `POST`          | `/api/img/delete`  | `token=<Token>`    |
+
+POST method won't be replaced with the DELETE one.
 
 _<h3>Responses</h3>_
 - 200 - *Ok*
@@ -114,7 +116,7 @@ _<h3>Responses</h3>_
 | :-------------: | :-------------: | :-----------------------------: |
 | `POST`          | `/api/img/exp`  | `token=<Token>&expire=<EXP>`    |
 
-Amount of seconds in `<EXP>` can't be less than 1 minute and more than 10 years.
+Value `<EXP>` can't be bellow 1 and above 9999999999.
 
 _<h3>Responses</h3>_
 - 200 - *Ok*
@@ -127,6 +129,6 @@ _<h3>Responses</h3>_
 
 # Legend
 `<Token>` - value returned from the Ok response when uploading an image. <br>
-`<EXP>` - integer representing after how many seconds the image will expire. <br>
+`<EXP>` - integer, timestamp of the new expiration date. <br>
 `<ID>` - integer representing an image ID. <br>
 `<FileExtention>` - Extension of the file (png, jpg, ico... etc)
